@@ -16,11 +16,15 @@ class EventAlignment{
 
 public:
   EventAlignment(std::string file_name);
+  EventAlignment();
+  ~EventAlignment();
   void print_branches();
+  bool open_file();
 
 private:
   TFile * InFile;
   TTree * InTree;
+  std::string fFileName;
 
 };
 

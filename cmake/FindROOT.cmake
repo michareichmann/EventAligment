@@ -221,8 +221,11 @@ MACRO (ROOT_GENERATE_DICTIONARY_OLD )
           ARGS -f ${OUTFILE} -c -p -DHAVE_CONFIG_H ${INCLUDE_DIRS} ${INFILES} ${LINKDEF_FILE}
           DEPENDS ${INFILES}
           )
-
-  #   MESSAGE("ROOT_CINT_EXECUTABLE has created the dictionary ${OUTFILE}")
+  MESSAGE("outfiles: " ${OUTFILES} )
+  MESSAGE("includes: " ${INCLUDE_DIRS})
+  MESSAGE("infiles: " ${INFILES})
+  MESSAGE("linkdef: " ${LINKDEF_FILE})
+  MESSAGE("ROOT_CINT_EXECUTABLE has created the dictionary ${OUTFILE}")
 
 ENDMACRO (ROOT_GENERATE_DICTIONARY_OLD)
 

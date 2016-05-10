@@ -8,10 +8,8 @@ int main(int argc, char* argv[]) {
     cout << "You have to give a tree to handle!" << endl;
     return -1;
   }
-  string bla = "Hallo";
-  cout << bla << endl;
   string file_name = argv[1];
-  cout << "TEST2" << endl;
+  cout << "Reading tree: " << file_name << endl;
   EventAlignment * EA;
   EA = new EventAlignment(file_name);
   EA->print_branches();

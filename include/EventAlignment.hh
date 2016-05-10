@@ -6,7 +6,7 @@
 #define EVENTALIGNMENT_EVENTALIGNMENT_H
 
 #include <iostream>
-
+#include "TSystem.h"
 #include <string>
 #include "TTree.h"
 #include "TFile.h"
@@ -16,7 +16,7 @@ class EventAlignment{
 
 public:
   EventAlignment(std::string file_name);
-  EventAlignment();
+//  EventAlignment();
   ~EventAlignment();
   void print_branches();
   bool open_file();

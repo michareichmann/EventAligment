@@ -3,6 +3,7 @@
 //
 
 #include "EventAlignment.hh"
+#include <TROOT.h>
 
 using namespace std;
 

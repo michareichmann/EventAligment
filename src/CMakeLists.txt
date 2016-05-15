@@ -1,5 +1,7 @@
 # source files
-SET(LIB_SOURCE_FILES EventAlignment.cc)
+SET(LIB_SOURCE_FILES
+        EventAlignment.cc
+        Utils.cc)
 # header files
 SET(LIB_HEADER_FILES ${PROJECT_SOURCE_DIR}/include/EventAlignment.hh)
 # root dictionary

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Debug0/src/evalDict.cxx">
-      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Debug0/src/evalDict.cxx" isTestSource="false" />
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Debug/src/evalDict.cxx">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Debug/src/evalDict.cxx" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/MinSizeRel0/src/evalDict.cxx">
-      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/MinSizeRel0/src/evalDict.cxx" isTestSource="false" />
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/MinSizeRel/src/evalDict.cxx">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/MinSizeRel/src/evalDict.cxx" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/RelWithDebInfo0/src/evalDict.cxx">
-      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/RelWithDebInfo0/src/evalDict.cxx" isTestSource="false" />
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/RelWithDebInfo/src/evalDict.cxx">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/RelWithDebInfo/src/evalDict.cxx" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Release0/src/evalDict.cxx">
-      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Release0/src/evalDict.cxx" isTestSource="false" />
+    <content url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Release/src/evalDict.cxx">
+      <sourceFolder url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Release/src/evalDict.cxx" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/main/main.cpp" isTestSource="false" />
@@ -28,32 +28,32 @@
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Debug0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Release0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/RelWithDebInfo0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/MinSizeRel0" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Release" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Debug" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/RelWithDebInfo" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/MinSizeRel" />
           <root url="file://$MODULE_DIR$/include" />
         </CLASSES>
         <SOURCES>
-          <root url="file:///usr/include" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
           <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/include" />
           <root url="file:///usr/local/include" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Debug0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Release0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/RelWithDebInfo0" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/MinSizeRel0" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Release" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Debug" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/RelWithDebInfo" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/MinSizeRel" />
           <root url="file://$MODULE_DIR$/include" />
         </SOURCES>
         <excluded>
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Debug0/src/evalDict.cxx" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/Release0/src/evalDict.cxx" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/RelWithDebInfo0/src/evalDict.cxx" />
-          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/8ac0dbe9/8ac0dbe9/MinSizeRel0/src/evalDict.cxx" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Release/src/evalDict.cxx" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/Debug/src/evalDict.cxx" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/RelWithDebInfo/src/evalDict.cxx" />
+          <root url="file://$USER_HOME$/.CLion12/system/cmake/generated/a799ce0e/a799ce0e/MinSizeRel/src/evalDict.cxx" />
         </excluded>
       </library>
     </orderEntry>

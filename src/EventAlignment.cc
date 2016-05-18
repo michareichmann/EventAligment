@@ -12,6 +12,7 @@
 #include "TSystem.h"
 #include <algorithm>
 #include <sstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -19,10 +20,12 @@ EventAlignment::EventAlignment(string file_name, uint32_t max_event_num) : fFile
                                                                            fNPulserEvents(0), fOffset(0), fFoundOffset(false), fThreshold(float(.5 * fNAveragedEvents)),
                                                                            fNOffsets(0) {
 
+  StartTime = clock();
   gSystem->Load("libTree.so");
   open_file();
   read_tree();
   Macro = (TMacro*)InFile->Get("region_information");
+  if (!fMaxEventNumber) fMaxEventNumber = fNEntries;
 
   NewFile = new TFile("test", "RECREATE");
   NewTree = InTree->CloneTree(0);
@@ -41,13 +44,6 @@ EventAlignment::~EventAlignment() {
 
   delete InFile;
   delete NewFile;
-}
-
-void EventAlignment::print_progress() {
-
-  if (fAtEntry % 1000 == 1) {
-    cout << "\rProcessing event " << fAtEntry - 1 << " " << flush;
-  }
 }
 
 void EventAlignment::open_file() {
@@ -82,7 +78,7 @@ void EventAlignment::read_tree() {
   InTree->SetBranchAddress("row", &vRow);
   InTree->SetBranchAddress("adc", &vAdc);
   InTree->SetBranchAddress("charge", &vCharge);
-  cout << "The tree has " << InTree->GetNbranches() << " branches!" << endl;
+  cout << "The tree has " << InTree->GetNbranches() << " branches and " << fNEntries << " entries!" << endl;
 }
 
 bool EventAlignment::get_next_event() {
@@ -110,12 +106,10 @@ void EventAlignment::resize_vectors() {
 // EVENT LOOP
 void EventAlignment::event_loop() {
 
-  uint32_t breakit = 0;
-
   while (get_next_event()){
 
     // stop loop at given event
-    if (fAtEntry == breakit){
+    if (fAtEntry == fMaxEventNumber){
       cout << endl;
       break;
     }
@@ -229,6 +223,33 @@ void EventAlignment::save_tree(){
 void EventAlignment::print_results() {
 
   stringstream ss;
-  ss << "END:\n" << "Successfully corrected for " << fNOffsets << " Offsets!";
+  ss << "FINISHED CONVERSION:\n";
+  ss << "Time: " << setprecision(2) << fixed << get_time(StartTime) << " seconds\n";
+  ss << "Successfully corrected for " << fNOffsets << " Offsets!";
   print_banner(ss.str());
+}
+
+float EventAlignment::get_time(const float time){
+
+  return (clock() - time) / CLOCKS_PER_SEC;
+}
+
+void EventAlignment::print_progress(){
+
+  stringstream ss;
+  float prog = float(fAtEntry) / fMaxEventNumber * 100;
+  if (fAtEntry % 100 == 1){
+    if (fAtEntry > 1) cout << "\r";
+    ss << "Progress: "  << setprecision(2) << setw(5) << setfill('0') << fixed << prog << "% ";
+    ss << "|" << string(uint32_t(round(prog)) / 2, '=') << ">";
+    ss << string(50 - uint32_t(round(prog)) / 2, ' ') << "| 100%    ";
+    cout << ss.str() << flush;
+    if (fAtEntry == fMaxEventNumber) cout << endl;
+//    if (fMaxEventNumber - fAtEntry < 10) cout << "|" << string(50 , '=') << ">";
+//    else cout << "|" <<string(uint32_t(float(fAtEntry) / fMaxEventNumber * 100) / 2, '=') << ">";
+//    if (fMaxEventNumber - fAtEntry < 10) cout << "| 100%    ";
+//    else cout << string(50 - uint32_t(float(fAtEntry) / fMaxEventNumber * 100) / 2, ' ') << "| 100%    ";
+//    cout.flush();
+//    if (fMaxEventNumber - fAtEntry < 10) cout << endl;
+  }
 }

@@ -25,6 +25,8 @@ public:
 
   void print_progress();
   void print_results();
+  float StartTime;
+  float get_time(const float);
 
   void resize_vectors();
   template <typename T, typename Q>

@@ -182,7 +182,7 @@ void EventAlignment::check_offset() {
     if (fHitsBeforePulser.back() > fThreshold){
       int16_t old_offset = fOffset;
       fOffset = find_offset();
-      if (fOffset != old_offset){
+      if (fOffset != old_offset and fOffset){
         fNOffsets++;
         cout << "Found event misalignment with offset: " << fOffset << endl;
       }
@@ -194,7 +194,11 @@ int16_t EventAlignment::find_offset() {
 
   uint32_t min_ind = find_min_index(fHitsBeforePulser);
   int16_t offset = int16_t(min_ind - fNLastEvents + 1);
-  if (offset) fFoundOffset = true;
+  fFoundOffset = bool(offset);
+  if (fFoundOffset and VERBOSE){
+    for (auto i:fHitsBeforePulser) cout << float(i) / fNAveragedEvents << " ";
+    cout << endl;
+  }
   return offset;
 }
 

@@ -9,6 +9,8 @@
 #include <vector>
 #include "stdint.h"
 
+#define VERBOSE 0
+
 class TTree;
 class TFile;
 class TMacro;

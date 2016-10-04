@@ -17,7 +17,7 @@
 using namespace std;
 
 EventAlignment::EventAlignment(string file_name, uint32_t max_event_num) : fFilePath(file_name), fMaxEventNumber(max_event_num), fNAveragedEvents(100), fNLastEvents(5),
-                                                                           fNPulserEvents(0), fOffset(0), fFoundOffset(false), fThreshold(float(.5 * fNAveragedEvents)),
+                                                                           fNPulserEvents(0), fOffset(0), fFoundOffset(false), fThreshold(float(.3 * fNAveragedEvents)),
                                                                            fNOffsets(0) {
 
   StartTime = clock();
@@ -27,7 +27,7 @@ EventAlignment::EventAlignment(string file_name, uint32_t max_event_num) : fFile
   Macro = (TMacro*)InFile->Get("region_information");
   if (!fMaxEventNumber) fMaxEventNumber = fNEntries;
 
-  NewFile = new TFile("test", "RECREATE");
+  NewFile = new TFile(fFileName.c_str(), "RECREATE");
   NewTree = InTree->CloneTree(0);
 
   vTelescopeBranches = {"plane", "col", "row", "adc", "charge"};
